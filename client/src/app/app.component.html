@@ -1,1 +1,18 @@
+<div>
+  <div>
+    <div>Title</div>
+    <input [(ngModel)]="title" type="text" placeholder="enter your title" />
+  </div>
+  <div>
+    <div>Post</div>
+    <input [(ngModel)]="post" type="text" placeholder="Enter your post" />
+  </div>
+  <button (click)="addPost()">Add Post</button>
+  <br />
+  <br />
+</div>
 
+<div *ngFor="let newsfeedItem of newsfeedItems">
+  <div>{{ newsfeedItem.title }}</div>
+  <div>{{ newsfeedItem.post }}</div>
+</div>
